@@ -1,11 +1,15 @@
 class Solution(object):
-    def isPalindrome(self, 121):
+    def isPalindrome(self, x):
+        if x<0:
+            return False
+
+        temp=x
+        rev=0
         
-        rev = 0
-        while (121>0):
-            rev = (rev* 10) + (121 % 10)
-            121 = 121//10        
-            
-        return (rev == 121)
+        while(x>0):
+            rev = rev*10 + x%10
+            x = x//10
+        
+        return temp == rev   
     
         
